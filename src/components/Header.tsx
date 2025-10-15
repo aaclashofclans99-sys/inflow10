@@ -42,7 +42,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
   return (
     <>
       {/* Dynamic Island Style Header */}
-      <header className="fixed top-4 left-4 right-4 z-50">
+      <header className="fixed top-4 left-4 right-4 z-10">
         <nav className="bg-white rounded-full px-8 py-3 shadow-2xl border border-gray-100/50 backdrop-blur-sm w-full">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-between w-full">
