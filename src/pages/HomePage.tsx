@@ -259,7 +259,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
               </div>
 
               {/* Top Right */}
-              <div className="absolute top-8 right-2 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
+              <div className="absolute top-8 right-0 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
                 <BarChart3 className="w-4 h-4 text-purple-500" />
                 <span className="text-sm font-medium text-gray-700">Access best data insights</span>
               </div>
