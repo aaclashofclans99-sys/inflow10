@@ -247,7 +247,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <img 
                   src="/Untitled design (2).png" 
                   alt="Molecular Design" 
-                  className="w-96 h-96 object-contain"
+                  className="w-196 h-196 object-contain"
                 />
               </div>
 
@@ -276,7 +276,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <span className="text-sm font-medium text-gray-700">Grow your client base</span>
               </div>
 
-                            {/* Connector Lines */}
+              {/* Connector Lines */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
                 {/* Top Left Connector */}
                 <path
