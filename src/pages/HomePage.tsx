@@ -247,7 +247,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <img 
                   src="/Untitled design (2).png" 
                   alt="Molecular Design" 
-                  className="w-96 h-96 object-contain"
+                  className="w-196 h-196 object-contain"
                 />
               </div>
 
