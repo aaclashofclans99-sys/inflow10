@@ -239,7 +239,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       {/* Our Mission Section */}
        <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-9x4 mx-auto">
             {/* Left Side - Visual Composition */}
             <div className="relative flex justify-center items-center">
               {/* Main Centerpiece Image */}
@@ -247,7 +247,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <img 
                   src="/Untitled design (2).png" 
                   alt="Molecular Design" 
-                  className="w-496 h-496"
+                  className="w-496 h-496 object-contain"
                 />
               </div>
 
