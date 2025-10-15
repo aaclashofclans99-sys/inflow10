@@ -239,7 +239,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       {/* Our Mission Section */}
        <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-9x4 mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-9x1 mx-auto">
             {/* Left Side - Visual Composition */}
             <div className="relative flex justify-center items-center">
               {/* Main Centerpiece Image */}
