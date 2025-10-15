@@ -298,42 +298,6 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       </section>
 
 
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
-              Trusted With Thousands
-            </h2>
-            <p className="text-xl text-gray-600 font-light">
-              See what our customers are saying about their Inflow experience
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover-lift group"
-              >
-                <div className="flex mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic font-medium text-base leading-relaxed">"{testimonial.text}"</p>
-                <div>
-                  <p className="text-gray-900 font-bold">{testimonial.name}</p>
-                  <p className="text-pink-600 text-sm font-medium">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
       {/* Integrations Section */}
       <section className="logo-carousel-section w-full bg-white py-12 overflow-hidden">
         <h2 className="text-4xl md:text-4xl font-black mb-12 text-center text-gray-900">Integrate with your favorite tools</h2>
