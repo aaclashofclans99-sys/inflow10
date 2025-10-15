@@ -256,7 +256,9 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 </span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed font-light">
-                Inflow's mission is to empower digital entrepreneurs and business owners with the tools they need to build, automate, and scale effortlessly. Our platform streamlines complex operations, data insights, and client engagement to achieve workflow efficiency and sustained growth — helping you focus on what matters most: innovation and progress.
+                Inflow's mission is to empower digital entrepreneurs and business owners with the tools they need to build, automate, and scale effortlessly. 
+                
+                Our platform streamlines complex operations, data insights, and client engagement to achieve workflow efficiency and sustained growth helping you focus on what matters most: innovation and progress.
               </p>
             </div>
           </div>
