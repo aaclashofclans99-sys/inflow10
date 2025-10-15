@@ -286,14 +286,6 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                   fill="none"
                   strokeDasharray="3,3"
                 />
-                {/* Top Right Connector */}
-                <path
-                  d="M 320 80 Q 280 140 200 200"
-                  stroke="#e5e7eb"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeDasharray="3,3"
-                />
                 {/* Bottom Left Connector */}
                 <path
                   d="M 80 340 Q 140 280 200 200"
