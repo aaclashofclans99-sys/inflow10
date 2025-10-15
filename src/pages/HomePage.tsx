@@ -276,6 +276,11 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <span className="text-sm font-medium text-gray-700">Grow your client base</span>
               </div>
 
+            {/* Connector Lines */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
+              </svg>
+            </div>
+
             {/* Right Side - Text Content */}
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
