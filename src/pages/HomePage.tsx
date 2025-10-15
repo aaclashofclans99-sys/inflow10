@@ -276,42 +276,6 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <span className="text-sm font-medium text-gray-700">Grow your client base</span>
               </div>
 
-              {/* Connector Lines */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
-                {/* Top Left Connector */}
-                <path
-                  d="M 80 60 Q 150 120 200 200"
-                  stroke="#e5e7eb"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeDasharray="3,3"
-                />
-                {/* Top Right Connector */}
-                <path
-                  d="M 320 80 Q 280 140 200 200"
-                  stroke="#e5e7eb"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeDasharray="3,3"
-                />
-                {/* Bottom Left Connector */}
-                <path
-                  d="M 80 340 Q 140 280 200 200"
-                  stroke="#e5e7eb"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeDasharray="3,3"
-                />
-                {/* Bottom Right Connector */}
-                <path
-                  d="M 320 340 Q 260 280 200 200"
-                  stroke="#e5e7eb"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeDasharray="3,3"
-                />
-              </svg>
-            </div>
 
             {/* Right Side - Text Content */}
             <div className="space-y-6">
