@@ -253,7 +253,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
 
               {/* Interactive Pop-ups */}
               {/* Top Left */}
-              <div className="absolute top-8 left-12 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
+              <div className="absolute top-2 left-16 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
                 <Zap className="w-4 h-4 text-pink-500" />
                 <span className="text-sm font-medium text-gray-700">Automate your workflow</span>
               </div>
