@@ -202,10 +202,44 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
         </div>
       </section>
 
-      {/* Our Mission Section */}
-       <section className="py-20">
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-8x1 mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
+              Trusted With Thousands
+            </h2>
+            <p className="text-xl text-gray-600 font-light">
+              See what our customers are saying about their Inflow experience
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover-lift group"
+              >
+                <div className="flex mb-6">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 italic font-medium text-base leading-relaxed">"{testimonial.text}"</p>
+                <div>
+                  <p className="text-gray-900 font-bold">{testimonial.name}</p>
+                  <p className="text-pink-600 text-sm font-medium">{testimonial.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Mission Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             {/* Left Side - Visual Composition */}
             <div className="relative flex justify-center items-center">
               {/* Main Centerpiece Image */}
@@ -219,13 +253,13 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
 
               {/* Interactive Pop-ups */}
               {/* Top Left */}
-              <div className="absolute top-2 left-16 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
+              <div className="absolute top-8 left-8 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
                 <Zap className="w-4 h-4 text-pink-500" />
                 <span className="text-sm font-medium text-gray-700">Automate your workflow</span>
               </div>
 
               {/* Top Right */}
-              <div className="absolute top-8 right-0 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
+              <div className="absolute top-16 right-4 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-100 flex items-center space-x-2 hover-lift">
                 <BarChart3 className="w-4 h-4 text-purple-500" />
                 <span className="text-sm font-medium text-gray-700">Access best data insights</span>
               </div>
@@ -242,8 +276,40 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 <span className="text-sm font-medium text-gray-700">Grow your client base</span>
               </div>
 
-            {/* Connector Lines */}
+              {/* Connector Lines */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
+                {/* Top Left Connector */}
+                <path
+                  d="M 80 60 Q 150 120 200 200"
+                  stroke="#e5e7eb"
+                  strokeWidth="1"
+                  fill="none"
+                  strokeDasharray="3,3"
+                />
+                {/* Top Right Connector */}
+                <path
+                  d="M 320 80 Q 280 140 200 200"
+                  stroke="#e5e7eb"
+                  strokeWidth="1"
+                  fill="none"
+                  strokeDasharray="3,3"
+                />
+                {/* Bottom Left Connector */}
+                <path
+                  d="M 80 340 Q 140 280 200 200"
+                  stroke="#e5e7eb"
+                  strokeWidth="1"
+                  fill="none"
+                  strokeDasharray="3,3"
+                />
+                {/* Bottom Right Connector */}
+                <path
+                  d="M 320 340 Q 260 280 200 200"
+                  stroke="#e5e7eb"
+                  strokeWidth="1"
+                  fill="none"
+                  strokeDasharray="3,3"
+                />
               </svg>
             </div>
 
@@ -259,6 +325,48 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
                 Inflow's mission is to empower digital entrepreneurs and business owners with the tools they need to build, automate, and scale effortlessly. Our platform streamlines complex operations, data insights, and client engagement to achieve workflow efficiency and sustained growth — helping you focus on what matters most: innovation and progress.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="logo-carousel-section w-full bg-white py-12 overflow-hidden">
+        <h2 className="text-4xl md:text-4xl font-black mb-12 text-center text-gray-900">Integrate with your favorite tools</h2>
+        <div className="marquee-wrapper overflow-hidden relative w-full">
+          <div className="marquee-track flex items-center gap-16 animate-marquee-scroll">
+            {/* Full sequence (set A) */}
+            <img src="/logo carousel integrations/facebook.png" alt="Facebook" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/google.png" alt="Google" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/linkedin.png" alt="LinkedIn" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/slack.png" alt="Slack" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/instagram.png" alt="Instagram" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/printful.png" alt="Printful" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/xero.png" alt="Xero" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/zapier.png" alt="Zapier" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/whatsapp.png" alt="WhatsApp" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/stripe.png" alt="Stripe" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/tiktok.png" alt="TikTok" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/shopify.png" alt="Shopify" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/quickbooks.png" alt="QuickBooks" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/clio.png" alt="Clio" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            
+            {/* Duplicate sequence (set A copy) for seamless loop */}
+            <img src="/logo carousel integrations/facebook.png" alt="Facebook" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/google.png" alt="Google" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/linkedin.png" alt="LinkedIn" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/slack.png" alt="Slack" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/instagram.png" alt="Instagram" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/printful.png" alt="Printful" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/xero.png" alt="Xero" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/zapier.png" alt="Zapier" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/whatsapp.png" alt="WhatsApp" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/stripe.png" alt="Stripe" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/tiktok.png" alt="TikTok" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/shopify.png" alt="Shopify" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/quickbooks.png" alt="QuickBooks" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/clio.png" alt="Clio" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
           </div>
         </div>
       </section>
@@ -296,6 +404,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
           </div>
         </div>
       </section>
+
 
       {/* Integrations Section */}
       <section className="logo-carousel-section w-full bg-white py-12 overflow-hidden">
