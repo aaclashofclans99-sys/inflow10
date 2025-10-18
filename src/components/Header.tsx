@@ -42,8 +42,8 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
   return (
     <>
       {/* Dynamic Island Style Header */}
-      <header className="fixed top-[2vh] left-[2vw] right-[2vw] z-50">
-        <nav className="bg-white rounded-full px-[4vw] py-[1.5vh] shadow-2xl border border-gray-100/50 backdrop-blur-sm w-full">
+      <header className="fixed top-4 left-4 right-4 z-50">
+        <nav className="bg-white rounded-full px-8 py-3 shadow-2xl border border-gray-100/50 backdrop-blur-sm w-full">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-between w-full">
             {/* Logo */}
@@ -51,7 +51,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
               className="flex items-center cursor-pointer"
               onClick={() => handleNavigation('home')}
             >
-              <div className="relative h-[4vh] w-[8vw] min-h-[2rem] min-w-[6rem] max-h-[2.5rem] max-w-[8rem]">
+              <div className="relative h-8 w-[100px]">
                 <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                   style={{
                     WebkitMaskImage: "url('/dffdf.png')",
@@ -68,12 +68,12 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             </div>
 
             {/* Navigation Links */}
-            <div className="flex items-center space-x-[3vw] flex-1 justify-center">
+            <div className="flex items-center space-x-6 flex-1 justify-center">
               {navItems.map((item) => (
                 <button
                   key={item.key}
                   onClick={() => handleNavigation(item.key)}
-                  className={`text-[clamp(0.75rem,1.8vw,0.875rem)] font-medium transition-colors duration-300 hover:text-pink-600 ${
+                  className={`text-sm font-medium transition-colors duration-300 hover:text-pink-600 ${
                     currentPage === item.key ? 'text-pink-600' : 'text-gray-700'
                   }`}
                 >
@@ -83,11 +83,11 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center space-x-[1.5vw]">
+            <div className="flex items-center space-x-3">
               {user ? (
                 <button
                   onClick={handleAuthAction}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-[2.5vw] py-[1vh] rounded-full font-medium text-[clamp(0.75rem,1.8vw,0.875rem)] transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
+                  className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-5 py-2 rounded-full font-medium text-sm transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
                 >
                   Sign Out
                 </button>
@@ -95,13 +95,13 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
                 <>
                   <button
                     onClick={() => window.location.href = '/login'}
-                    className="text-gray-700 hover:text-pink-600 border border-gray-300 hover:border-pink-600 px-[2.5vw] py-[1vh] rounded-full font-medium text-[clamp(0.75rem,1.8vw,0.875rem)] transition-all duration-300"
+                    className="text-gray-700 hover:text-pink-600 border border-gray-300 hover:border-pink-600 px-5 py-2 rounded-full font-medium text-sm transition-all duration-300"
                   >
                     Login
                   </button>
                   <button
                     onClick={() => window.location.href = '/signup'}
-                    className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-[2.5vw] py-[1vh] rounded-full font-medium text-[clamp(0.75rem,1.8vw,0.875rem)] transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-5 py-2 rounded-full font-medium text-sm transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
                   >
                     Sign Up
                   </button>
@@ -117,7 +117,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
               className="flex items-center cursor-pointer"
               onClick={() => handleNavigation('home')}
             >
-              <div className="relative h-[3vh] w-[12vw] min-h-[1.5rem] min-w-[5rem] max-h-[2rem] max-w-[6rem]">
+              <div className="relative h-6 w-[80px]">
                 <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
                   style={{
                     WebkitMaskImage: "url('/dffdf.png')",
@@ -136,22 +136,22 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-pink-600 transition-colors duration-300 p-[0.5vh]"
+              className="text-gray-700 hover:text-pink-600 transition-colors duration-300 p-1"
             >
-              {isMenuOpen ? <X size="clamp(18, 3vw, 24)" /> : <Menu size="clamp(18, 3vw, 24)" />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </nav>
 
         {/* Mobile Dropdown Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-[1vh] bg-white rounded-2xl shadow-2xl border border-gray-100/50 backdrop-blur-sm p-[2vh]">
-            <div className="flex flex-col space-y-[1.5vh]">
+          <div className="lg:hidden mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100/50 backdrop-blur-sm p-4">
+            <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <button
                   key={item.key}
                   onClick={() => handleNavigation(item.key)}
-                  className={`text-left text-[clamp(0.875rem,3vw,1rem)] font-medium transition-colors duration-300 hover:text-pink-600 py-[1vh] ${
+                  className={`text-left text-sm font-medium transition-colors duration-300 hover:text-pink-600 py-2 ${
                     currentPage === item.key ? 'text-pink-600' : 'text-gray-700'
                   }`}
                 >
@@ -159,25 +159,25 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
                 </button>
               ))}
               
-              <div className="border-t border-gray-200 pt-[1.5vh] mt-[1.5vh]">
+              <div className="border-t border-gray-200 pt-3 mt-3">
                 {user ? (
                   <button
                     onClick={handleAuthAction}
-                    className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-[2vw] py-[1vh] rounded-full font-medium text-[clamp(0.875rem,3vw,1rem)] transition-all duration-300 w-full shadow-lg hover:shadow-pink-500/25"
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 w-full shadow-lg hover:shadow-pink-500/25"
                   >
                     Sign Out
                   </button>
                 ) : (
-                  <div className="space-y-[1vh]">
+                  <div className="space-y-2">
                     <button
                       onClick={() => window.location.href = '/login'}
-                      className="text-gray-700 hover:text-pink-600 border border-gray-300 hover:border-pink-600 px-[2vw] py-[1vh] rounded-full font-medium text-[clamp(0.875rem,3vw,1rem)] transition-all duration-300 w-full"
+                      className="text-gray-700 hover:text-pink-600 border border-gray-300 hover:border-pink-600 px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 w-full"
                     >
                       Login
                     </button>
                     <button
                       onClick={() => window.location.href = '/signup'}
-                      className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-[2vw] py-[1vh] rounded-full font-medium text-[clamp(0.875rem,3vw,1rem)] transition-all duration-300 w-full shadow-lg hover:shadow-pink-500/25"
+                      className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 w-full shadow-lg hover:shadow-pink-500/25"
                     >
                       Sign Up
                     </button>
